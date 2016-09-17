@@ -16,3 +16,5 @@ require('angular-ui-utils'); // jshint ignore:line
 require('angular-translate'); // jshint ignore:line
 require('angular-translate-loader-static-files'); // jshint ignore:line
 require('angular-translate-loader-url'); // jshint ignore:line
+require('angular-google-maps-native'); // jshint ignore:line
+require('angular-google-places-autocomplete'); // jshint ignore:line

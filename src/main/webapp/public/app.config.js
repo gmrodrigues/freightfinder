@@ -4,7 +4,15 @@
 var ApplicationConfiguration = (function () {
     // Init module configuration options
     var applicationModuleName = 'App';
-    var applicationModuleVendorDependencies = ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'pascalprecht.translate'];
+    var applicationModuleVendorDependencies = [
+        'ui.bootstrap',
+        'ui.utils',
+        'ui.router',
+        'ngAnimate',
+        'pascalprecht.translate',
+        'GoogleMapsNative',
+        'google.places'
+        ];
 
     // Add a new vertical module
     var registerModule = function (moduleName, dependencies) {
