@@ -5,6 +5,7 @@ angular.module('core')
 
         $scope.AppName = 'Modify me in Core Module';
         $scope.ModuleTest = 'Modify me in Core Module';
+        $scope.pin = {};
 
         $scope.position = [0,0];
         $scope.mapOptions = {center: [37.772323, -122.214897], zoom: 16, mapTypeId: google.maps.MapTypeId.ROADMAP};
@@ -23,4 +24,18 @@ angular.module('core')
             $scope.position = [newValue.lat(),newValue.lng()];
             $scope.mapOptions.center = $scope.position;
          });
+
+         $scope.getMarkerAddress = function (pos) {
+             var latLng = {lat:pos.lat(), lng:pos.lng()};
+             var geocoder = new google.maps.Geocoder();
+             geocoder.geocode({
+               latLng: latLng
+             }, function(responses) {
+               if (responses && responses.length > 0) {
+                 $scope.myScopeVar =  responses[0].formatted_address;
+               } else {
+                 updateMarkerAddress('Cannot determine address at this location.');
+               }
+             });
+           };
     }]);

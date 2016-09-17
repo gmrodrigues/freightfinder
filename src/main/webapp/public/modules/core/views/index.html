@@ -17,13 +17,21 @@
         </header>
         <div class="row">
             <div class="col-md-12">
-                <input type="text" style="width: 100%;" g-places-autocomplete ng-model="myScopeVar" nforceSelection="true"/>
+                <input type="text" style="width: 100%;" g-places-autocomplete ng-model="myScopeVar" forceSelection="true"/>
                 <div data-ng-if="position[0]">
                     {{position}}
                     <gm-map options="mapOptions">
-                        <gm-marker  position="map.getCenter()" options="{draggable: true}"></gm-marker>
+                        <gm-marker
+                                position="map.getCenter()" options="{draggable: true}"
+                                on-dragend="getMarkerAddress(marker.getPosition())"
+                        ></gm-marker>
                     </gm-map>
+
+                    {{pin}}
+                    <hr/>
                     {{myScopeVar}}
+                    <hr/>
+
                 </div>
             </div>
         </div>

@@ -1,3 +1,11 @@
+# Useful links:
+
+http://jbdemonte.github.io/angular-google-maps-native/api-gmMarker.html
+https://github.com/kuhnza/angular-google-places-autocomplete
+https://developers.google.com/maps/documentation/javascript/events#EventsOverview
+https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=pt-br
+
+
 # Leptir - the seed for professional AngularJS apps
 
 Leptir means in croatian language Butterfly.
